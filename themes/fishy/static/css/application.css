@@ -441,26 +441,22 @@ th {
 @-moz-keyframes spin {
   0% {
     -moz-transform: rotate(0deg); }
-
   100% {
     -moz-transform: rotate(359deg); } }
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg); }
-
   100% {
     -webkit-transform: rotate(359deg); } }
 @-o-keyframes spin {
   0% {
     -o-transform: rotate(0deg); }
-
   100% {
     -o-transform: rotate(359deg); } }
 @keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
-
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
@@ -1923,7 +1919,7 @@ th {
 html, body {
   height: 100%;
   background: #f2f2f2;
-  font-family: "PT Serif", serif; }
+  font-family: "Open-Sans", sans-serif; }
 
 h1, h2, h3, h4, h5, h6, p, figure {
   margin: 0; }
@@ -2025,11 +2021,11 @@ a {
   .post-symbol.blue {
     background: #51b2e9; }
   .post-symbol.orange {
-    background: #ffa040; }
+    background: #FFA040; }
   .post-symbol.yellow {
-    background: #e5e166; }
+    background: #E5E166; }
   .post-symbol.green {
-    background: #90ff6e; }
+    background: #90FF6E; }
   .post-symbol.gray {
     background: #5e5e5d; }
   .post-symbol .symbol {
@@ -2057,18 +2053,16 @@ a {
 @-webkit-keyframes shake {
   0%, 100% {
     -webkit-transform: translateX(0); }
-
   10%, 30%, 50%, 70%, 90% {
     -webkit-transform: translateX(-1px); }
-
   20%, 40%, 60%, 80% {
     -webkit-transform: translateX(1px); } }
 @keyframes shake {
   0%, 100% {
     transform: translateX(0); }
-
   10%, 30%, 50%, 70%, 90% {
     transform: translateX(-1px); }
-
   20%, 40%, 60%, 80% {
     transform: translateX(1px); } }
+
+/*# sourceMappingURL=application.css.map */
