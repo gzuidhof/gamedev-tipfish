@@ -1,7 +1,6 @@
 +++
-Description = ""
-Tags = ["Development", "golang"]
-Categories = ["Development", "GoLang"]
+Tags = ["tip", ""]
+Categories = []
 color = ""
 icon = ""
 +++

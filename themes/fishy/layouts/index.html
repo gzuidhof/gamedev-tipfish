@@ -1,1 +1,3 @@
-{{ template "theme/_default/list.html" . }}
+{{ range first 1 .Data.Pages }}
+{{ template "theme/_default/single.html" . }}
+{{ end }}
