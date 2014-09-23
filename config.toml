@@ -1,0 +1,4 @@
+baseurl = "http://gamedev.tip.fish"
+languageCode = "en-us"
+title = "Gamedev tipfish"
+theme = "fishy"

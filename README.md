@@ -1,4 +1,0 @@
-tipfish
-=======
-
-Static website
