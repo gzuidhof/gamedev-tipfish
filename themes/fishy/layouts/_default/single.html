@@ -4,9 +4,9 @@
 
   <div id="content-container">
     <div class="post">
-      <h1>{{ .Title }}</h1>
+      <h1 class="post-title">{{ .Title }}</h1>
       <span class="post-date"><p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p></span>
-      <p class="post-content">{{ .Content }}</p>
+      <span class="post-content">{{ .Content }}</span>
     </div>
     <hr></hr>
 	{{ template "theme/partials/post-footer.html" . }}

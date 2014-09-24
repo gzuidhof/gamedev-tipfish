@@ -28,6 +28,11 @@
 }
 
 #single {
+
+  .post-title {
+    font-size: 2.5em;
+  }
+
   .post-symbol {
     height: 300px;
 
@@ -40,11 +45,19 @@
     }
   }
 
+  .post-content {
+    font-size: 1.4em;
+  }
+
   .post-date {
     font-family: $indie-flower;
-    font-size: 1em;
+    font-size: 1.4em;
     line-height: 0.8em;
     color: #555;
+  }
+
+  .post-footer {
+    color: gray;
   }
 }
 

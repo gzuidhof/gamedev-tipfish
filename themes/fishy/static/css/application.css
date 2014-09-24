@@ -1924,14 +1924,8 @@ html, body {
 h1, h2, h3 {
   font-family: "Indie Flower", sans-serif; }
 
-h1 {
-  font-size: 3em; }
-
 h1, h2, h3, h4, h5, h6, p, figure {
   margin: 0.3em; }
-
-p {
-  font-size: 1.4em; }
 
 a {
   color: inherit; }
@@ -1958,17 +1952,23 @@ a {
     right: 50px;
     top: 15px; }
 
+#single .post-title {
+  font-size: 2.5em; }
 #single .post-symbol {
   height: 300px; }
   #single .post-symbol .symbol {
     margin-top: 60px; }
   #single .post-symbol .description {
     margin-top: 30px; }
+#single .post-content {
+  font-size: 1.4em; }
 #single .post-date {
   font-family: "Indie Flower", sans-serif;
-  font-size: 1em;
+  font-size: 1.4em;
   line-height: 0.8em;
   color: #555; }
+#single .post-footer {
+  color: gray; }
 
 #list .post-symbol {
   line-height: 200px; }
