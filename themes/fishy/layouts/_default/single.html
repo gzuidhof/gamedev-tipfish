@@ -6,11 +6,14 @@
     <div class="post">
       <h1 class="post-title">{{ .Title }}</h1>
       <span class="post-date"><p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p></span>
-      <span class="post-content">{{ .Content }}</span>
+      <span class="post-content">
+        {{ .Content }}
+      </span>
     </div>
-    <hr></hr>
+    <hr>
 	{{ template "theme/partials/post-footer.html" . }}
     {{ template "theme/partials/disqus.html" . }}
   </div>
+  {{ template "theme/partials/footer.html" . }}
 </body>
 </html>

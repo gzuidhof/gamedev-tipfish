@@ -2,3 +2,5 @@ baseurl = "http://gamedev.tip.fish"
 languageCode = "en-us"
 title = "Gamedev tipfish"
 theme = "fishy"
+[Params]
+analytics = "UA-27958193-8"
