@@ -10,11 +10,23 @@
 html, body {
   height: 100%;
   background: $concrete;
-  font-family: $open-sans;
+  font-family: $merriweather-sans;
+}
+
+h1, h2, h3 {
+  font-family: $indie-flower;
+}
+
+h1 {
+  font-size: 3em;
 }
 
 h1, h2, h3, h4, h5, h6, p, figure {
-  margin: 0;
+  margin: 0.3em;
+}
+
+p {
+  font-size: 1.4em;
 }
 
 a {

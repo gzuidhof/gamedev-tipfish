@@ -8,15 +8,18 @@
 
   <nav class="horizontal-nav">
     <ul class="horizontal-nav-list">
-      <li class='{{ if eq $currentPath "/" }} active {{ end }}'>
-        <a href="{{ $baseUrl }}">all</a>
+	
+      <li class='{{ if eq .Section "post"}} active {{ end }}'>
+        <a href="{{ $baseUrl }}">latest</a>
       </li>
-
-      {{ range $key, $element := .Site.Sections }}
-        <li class='{{ if eq $currentPath (print "/" $key) }} active {{ end }}'>
-          <a href="{{ $baseUrl }}/{{$key}}">{{ $key }}</a>
+	  
+		<li class='{{ if eq $currentPath "/post/" }} active {{ end }}'>
+          <a href="{{ $baseUrl }}/post">list</a>
         </li>
-      {{ end }}
+		
+        <li class='{{ if eq .Title "about" }} active {{ end }}'>
+          <a href="{{ $baseUrl }}/about">about</a>
+        </li>
 
     </ul>
   </nav>

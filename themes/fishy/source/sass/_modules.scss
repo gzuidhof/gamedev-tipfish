@@ -39,7 +39,7 @@
 
 /* Single post in list */
 .post-preview {
-  height: 150px;
+  height: 80px;
   margin: 15px 0;
   position: relative;
 
@@ -56,9 +56,6 @@
   }
 
   .post-content {
-    position: absolute;
-    left: 190px;
-    top: 15px;
     display: inline-block;
     color: $gray;
   }

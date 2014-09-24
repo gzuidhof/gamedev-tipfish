@@ -1919,10 +1919,19 @@ th {
 html, body {
   height: 100%;
   background: #f2f2f2;
-  font-family: "Open-Sans", sans-serif; }
+  font-family: "Merriweather Sans", sans-serif; }
+
+h1, h2, h3 {
+  font-family: "Indie Flower", sans-serif; }
+
+h1 {
+  font-size: 3em; }
 
 h1, h2, h3, h4, h5, h6, p, figure {
-  margin: 0; }
+  margin: 0.3em; }
+
+p {
+  font-size: 1.4em; }
 
 a {
   color: inherit; }
@@ -1933,15 +1942,15 @@ a {
 /* Wrapper for the content */
 #content-container {
   width: 100%;
-  max-width: 960px;
+  max-width: 980px;
   margin: 0 auto;
-  padding: 20px 0 0 0; }
+  padding: 80px 20px 20px 0; }
 
 /* Header with navigation */
 #main-header {
   position: relative;
-  height: 100px;
-  background: white; }
+  height: 8px;
+  background: #00aeff; }
   #main-header .profile-image {
     margin: 15px 0 0 15px; }
   #main-header .horizontal-nav {
@@ -1955,8 +1964,11 @@ a {
     margin-top: 60px; }
   #single .post-symbol .description {
     margin-top: 30px; }
-#single .post-content {
-  margin-top: 30px; }
+#single .post-date {
+  font-family: "Indie Flower", sans-serif;
+  font-size: 1em;
+  line-height: 0.8em;
+  color: #555; }
 
 #list .post-symbol {
   line-height: 200px; }
@@ -1992,7 +2004,7 @@ a {
 
 /* Single post in list */
 .post-preview {
-  height: 150px;
+  height: 80px;
   margin: 15px 0;
   position: relative;
   -webkit-transition: all 0.5s ease;
@@ -2006,9 +2018,6 @@ a {
     height: 150px;
     width: 150px; }
   .post-preview .post-content {
-    position: absolute;
-    left: 190px;
-    top: 15px;
     display: inline-block;
     color: #5e5e5d; }
 
