@@ -5,7 +5,7 @@ branches:
 
 script:
   - java -jar ./bin/Fishy.jar verify
-  - sudo ./bin/hugo_0.12_linux_386
+  - sudo ./bin/hugo_0.12_linux_amd64
 
 after_success:
   - ./deploy.sh
