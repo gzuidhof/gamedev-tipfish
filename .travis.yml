@@ -1,3 +1,18 @@
 language: java
-script: 
-  - java -jar ./Fishy.jar verify
+branches:
+  except:
+    - gh-pages
+
+script:
+  - java -jar ./bin/Fishy.jar verify
+  - ./bin/hugo_0.12_linux_amd64
+
+after_success:
+  - ./deploy.sh
+
+env:
+global:
+- ENCRYPTION_LABEL="dc2141a8e04f"
+- GIT_NAME="Fishy"
+- GIT_EMAIL="deploy@fish.tip"
+- DEPLOY_BRANCH="master"
