@@ -7,8 +7,8 @@ before_script:
   - sudo apt-get install gcc-multilib g++-multilib -y
 
 script:
-  - java -jar ./bin/Fishy.jar verify
-  - sudo ./bin/hugo_0.12_linux_386
+  - java -jar ./Fishy.jar verify
+  - sudo ./hugo_0.12_linux_386
 
 after_success:
   - ./deploy.sh
