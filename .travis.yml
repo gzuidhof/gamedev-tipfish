@@ -3,6 +3,7 @@ branches:
   except:
     - gh-pages
 before_script:
+  - sudo apt-get update
   - sudo apt-get install gcc-multilib g++-multilib -y
 
 script:
