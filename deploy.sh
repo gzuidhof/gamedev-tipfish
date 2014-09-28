@@ -12,6 +12,7 @@ if [ ! -d "$SOURCE_DIR" ]; then
 fi
 
 REPO=$(git config remote.origin.url)
+echo $REPO
 
 if [ -n "$TRAVIS_BUILD_ID" ]; then
   # When running on Travis we need to use SSH to deploy to GitHub
