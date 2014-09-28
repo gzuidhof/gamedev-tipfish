@@ -9,7 +9,7 @@ before_script:
 script:
   - java -jar ./Fishy.jar verify
   - sudo ./hugo_0.12_linux_386
-  - cp -a ./themes/fishy/static/. ./public/
+  - sudo cp -a ./themes/fishy/static/. ./public/
 
 after_success:
   - sudo sh ./deploy.sh
