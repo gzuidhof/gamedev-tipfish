@@ -44,7 +44,7 @@ if [ -n "$TRAVIS_BUILD_ID" ]; then
       ENCRYPTED_IV_VAR=encrypted_${ENCRYPTION_LABEL}_iv
       ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
       ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
-      REPO=${REPO/https:\/\/github.com\//git@github.com:}
+      REPO=${REPO/git:\/\/github.com\//git@github.com:}
       
       # The `deploy_key.enc` file should have been added to the repo and should
       # have been created from the deploy private key using `travis encrypt-file`
@@ -67,4 +67,4 @@ rsync -rt --delete --exclude=".git" --exclude=".nojekyll" --exclude=".travis.yml
 cd $TARGET_DIR
 git add -A .
 git commit --allow-empty -m "Built from commit $REV"
-git push $REPO $TARGET_BRANCH
+git push ${PUSH_TARGET} $TARGET_BRANCH
