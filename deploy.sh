@@ -11,7 +11,7 @@ if [ ! -d "$SOURCE_DIR" ]; then
   exit 1
 fi
 
-REPO=$(https://github.com/Rahazan/gamedev-tipfish.git)
+REPO=https://github.com/Rahazan/gamedev-tipfish.git
 
 if [ -n "$TRAVIS_BUILD_ID" ]; then
   # When running on Travis we need to use SSH to deploy to GitHub
