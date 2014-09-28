@@ -21,4 +21,4 @@ script:
 
 after_success:
   - sudo chmod +x deploy.sh
-  - sh ./deploy.sh
+  - bash ./deploy.sh
