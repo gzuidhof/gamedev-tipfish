@@ -1,7 +1,15 @@
 language: java
+env:
+  global:
+    - ENCRYPTION_LABEL="dc2141a8e04f"
+    - GIT_NAME="Fishy"
+    - GIT_EMAIL="deploy@fish.tip"
+    - DEPLOY_BRANCH="master"
+
 branches:
   except:
     - gh-pages
+
 before_script:
   - sudo apt-get update
   - sudo apt-get install gcc-multilib g++-multilib -y
@@ -12,11 +20,5 @@ script:
   - sudo cp -a ./themes/fishy/static/. ./public/
 
 after_success:
-  - sudo sh ./deploy.sh
-
-env:
-global:
-- ENCRYPTION_LABEL="dc2141a8e04f"
-- GIT_NAME="Fishy"
-- GIT_EMAIL="deploy@fish.tip"
-- DEPLOY_BRANCH="master"
+  - sudo chmod +x deploy.sh
+  - sh ./deploy.sh
