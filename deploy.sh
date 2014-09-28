@@ -16,7 +16,7 @@ fi
 REPO=$(git config remote.origin.url)
 echo $REPO
 
-if [ -n "$TRAVIS_BUILD_ID" ]; then
+#if [ -n "$TRAVIS_BUILD_ID" ]; then
   # When running on Travis we need to use SSH to deploy to GitHub
   #
   # The following converts the repo URL to an SSH location,
@@ -63,7 +63,7 @@ if [ -n "$TRAVIS_BUILD_ID" ]; then
       echo Set git username and e-mail
     fi
   fi
-fi
+#fi
 
 REPO_NAME=$(basename $REPO)
 TARGET_DIR=$(mktemp -d /tmp/$REPO_NAME.XXXX)
