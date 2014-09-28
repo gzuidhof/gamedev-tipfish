@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-git config --global url."https://".insteadOf git://
+#git config --global url."https://".insteadOf git://
 
 # Deploy built site to this branch
 TARGET_BRANCH=gh-pages
@@ -14,11 +14,8 @@ if [ ! -d "$SOURCE_DIR" ]; then
 fi
 
 REPO=$(git config remote.origin.url)
-echo $REPO
-echo $TRAVIS_BUILD_ID
-echo ${TRAVIS_BUILD_ID}
 
-#if [ -n "$TRAVIS_BUILD_ID" ]; then
+if [ -n "$TRAVIS_BUILD_ID" ]; then
   # When running on Travis we need to use SSH to deploy to GitHub
   #
   # The following converts the repo URL to an SSH location,
@@ -41,16 +38,16 @@ echo ${TRAVIS_BUILD_ID}
     echo "Travis should only deploy from the DEPLOY_BRANCH ($DEPLOY_BRANCH) branch"
     exit 0
   else
-#    if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
-#      echo "Travis should not deploy from pull requests"
-#      exit 0
-#    else
+    if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
+      echo "Travis should not deploy from pull requests"
+      exit 0
+    else
       echo De-encrypting...
       ENCRYPTED_KEY_VAR=encrypted_${ENCRYPTION_LABEL}_key
       ENCRYPTED_IV_VAR=encrypted_${ENCRYPTION_LABEL}_iv
       ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
       ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
-      REPO=${REPO/https:\/\/github.com\//git@github.com:}
+      REPO=${REPO/git:\/\/github.com\//git@github.com:}
       
       # The `deploy_key.enc` file should have been added to the repo and should
       # have been created from the deploy private key using `travis encrypt-file`
@@ -63,8 +60,8 @@ echo ${TRAVIS_BUILD_ID}
       git config --global user.email "$GIT_EMAIL"
       
       echo Set git username and e-mail
-#    fi
-#  fi
+    fi
+  fi
 fi
 
 REPO_NAME=$(basename $REPO)
@@ -73,7 +70,7 @@ REV=$(git rev-parse HEAD)
 git clone --branch ${TARGET_BRANCH} ${REPO} ${TARGET_DIR}
 rsync -rt --delete --exclude=".git" --exclude=".nojekyll" --exclude=".travis.yml" $SOURCE_DIR/ $TARGET_DIR/
 cd $TARGET_DIR
-git config --global url."https://".insteadOf git://
+#git config --global url."https://".insteadOf git://
 git add -A .
 git commit --allow-empty -m "Built from commit $REV"
 git push $REPO $TARGET_BRANCH
