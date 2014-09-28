@@ -11,7 +11,6 @@ if [ ! -d "$SOURCE_DIR" ]; then
   exit 1
 fi
 
-REPO=$(git config remote.origin.url)
 echo $REPO
 
 if [ -n "$TRAVIS_BUILD_ID" ]; then
