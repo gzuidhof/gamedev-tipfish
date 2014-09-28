@@ -67,4 +67,4 @@ rsync -rt --delete --exclude=".git" --exclude=".nojekyll" --exclude=".travis.yml
 cd $TARGET_DIR
 git add -A .
 git commit --allow-empty -m "Built from commit $REV"
-git push ${PUSH_TARGET} $TARGET_BRANCH
+git push https://github.com/Rahazan/gamedev-tipfish.git $TARGET_BRANCH
