@@ -15,6 +15,8 @@ fi
 
 REPO=$(git config remote.origin.url)
 echo $REPO
+echo $TRAVIS_BUILD_ID
+echo ${TRAVIS_BUILD_ID}
 
 #if [ -n "$TRAVIS_BUILD_ID" ]; then
   # When running on Travis we need to use SSH to deploy to GitHub
@@ -39,10 +41,10 @@ echo $REPO
     echo "Travis should only deploy from the DEPLOY_BRANCH ($DEPLOY_BRANCH) branch"
     exit 0
   else
-    if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
-      echo "Travis should not deploy from pull requests"
-      exit 0
-    else
+#    if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
+#      echo "Travis should not deploy from pull requests"
+#      exit 0
+#    else
       echo De-encrypting...
       ENCRYPTED_KEY_VAR=encrypted_${ENCRYPTION_LABEL}_key
       ENCRYPTED_IV_VAR=encrypted_${ENCRYPTION_LABEL}_iv
@@ -61,9 +63,9 @@ echo $REPO
       git config --global user.email "$GIT_EMAIL"
       
       echo Set git username and e-mail
-    fi
-  fi
-#fi
+#    fi
+#  fi
+fi
 
 REPO_NAME=$(basename $REPO)
 TARGET_DIR=$(mktemp -d /tmp/$REPO_NAME.XXXX)
