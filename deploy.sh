@@ -11,7 +11,7 @@ if [ ! -d "$SOURCE_DIR" ]; then
   exit 1
 fi
 
-REPO=$(git config remote.origin.url)
+REPO=$(https://github.com/Rahazan/gamedev-tipfish.git)
 
 if [ -n "$TRAVIS_BUILD_ID" ]; then
   # When running on Travis we need to use SSH to deploy to GitHub
@@ -67,4 +67,4 @@ rsync -rt --delete --exclude=".git" --exclude=".nojekyll" --exclude=".travis.yml
 cd $TARGET_DIR
 git add -A .
 git commit --allow-empty -m "Built from commit $REV"
-git push https://github.com/Rahazan/gamedev-tipfish.git $TARGET_BRANCH
+git push $REPO $TARGET_BRANCH
