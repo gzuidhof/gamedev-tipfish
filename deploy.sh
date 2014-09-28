@@ -43,11 +43,12 @@ if [ -n "$TRAVIS_BUILD_ID" ]; then
       echo "Travis should not deploy from pull requests"
       exit 0
     else
+      echo De-encrypting...
       ENCRYPTED_KEY_VAR=encrypted_${ENCRYPTION_LABEL}_key
       ENCRYPTED_IV_VAR=encrypted_${ENCRYPTION_LABEL}_iv
       ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
       ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
-      REPO=${REPO/git:\/\/github.com\//git@github.com:}
+      REPO=${REPO/https:\/\/github.com\//git@github.com:}
       
       # The `deploy_key.enc` file should have been added to the repo and should
       # have been created from the deploy private key using `travis encrypt-file`
@@ -58,6 +59,8 @@ if [ -n "$TRAVIS_BUILD_ID" ]; then
       ssh-add deploy_key
       git config --global user.name "$GIT_NAME"
       git config --global user.email "$GIT_EMAIL"
+      
+      echo Set git username and e-mail
     fi
   fi
 fi
