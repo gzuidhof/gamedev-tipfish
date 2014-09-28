@@ -1,7 +1,7 @@
 language: java
 env:
   global:
-    - ENCRYPTION_LABEL="dc2141a8e04f"
+    - ENCRYPTION_LABEL="79ace690fdac"
     - GIT_NAME="Fishy"
     - GIT_EMAIL="deploy@fish.tip"
     - DEPLOY_BRANCH="master"
