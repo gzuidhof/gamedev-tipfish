@@ -20,4 +20,3 @@ global:
 - GIT_NAME="Fishy"
 - GIT_EMAIL="deploy@fish.tip"
 - DEPLOY_BRANCH="master"
-- PUSH_TARGET="https://github.com/Rahazan/gamedev-tipfish.git"

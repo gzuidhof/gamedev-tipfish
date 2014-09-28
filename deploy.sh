@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+git config --global url."https://".insteadOf git://
+
 # Deploy built site to this branch
 TARGET_BRANCH=gh-pages
 # Sync the contents of this directory where the site should have been built
@@ -11,7 +13,8 @@ if [ ! -d "$SOURCE_DIR" ]; then
   exit 1
 fi
 
-REPO=https://github.com/Rahazan/gamedev-tipfish.git
+REPO=$(git config remote.origin.url)
+echo $REPO
 
 if [ -n "$TRAVIS_BUILD_ID" ]; then
   # When running on Travis we need to use SSH to deploy to GitHub
@@ -65,6 +68,7 @@ REV=$(git rev-parse HEAD)
 git clone --branch ${TARGET_BRANCH} ${REPO} ${TARGET_DIR}
 rsync -rt --delete --exclude=".git" --exclude=".nojekyll" --exclude=".travis.yml" $SOURCE_DIR/ $TARGET_DIR/
 cd $TARGET_DIR
+git config --global url."https://".insteadOf git://
 git add -A .
 git commit --allow-empty -m "Built from commit $REV"
 git push $REPO $TARGET_BRANCH
