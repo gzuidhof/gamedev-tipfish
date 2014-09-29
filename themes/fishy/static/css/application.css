@@ -1924,11 +1924,30 @@ html, body {
 h1, h2, h3 {
   font-family: "Indie Flower", sans-serif; }
 
-h1, h2, h3, h4, h5, h6, p, figure {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0.3em; }
 
 a {
   color: inherit; }
+
+blockquote {
+  border-left: 1px solid #ccc;
+  color: #a2a1a1;
+  font-style: italic;
+  margin: 20px;
+  padding: 2px; }
+
+blockquote cite {
+  color: #444;
+  display: block;
+  margin-top: 4px; }
+
+figure {
+  text-align: center; }
+
+figcaption h4 {
+  font-size: 0.75em;
+  margin: 0px; }
 
 /* Cross browser transitions */
 /* Clearfix */
