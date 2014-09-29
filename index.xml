@@ -24,6 +24,16 @@
     </item>
     
     <item>
+      <title>about</title>
+      <link>http://gamedev.tip.fish/about/</link>
+      <pubDate>Tue, 23 Sep 2014 02:48:24 &#43;0200</pubDate>
+      
+      <guid>http://gamedev.tip.fish/about/</guid>
+      <description>&lt;p&gt;gamedev.tip.fish is a site where game developer tips are posted on a daily basis. At least, I hope it will soon do that :).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Bla bla goed verhaal</title>
       <link>http://gamedev.tip.fish/post/1/</link>
       <pubDate>Tue, 23 Sep 2014 00:00:00 UTC</pubDate>
