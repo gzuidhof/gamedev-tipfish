@@ -1988,6 +1988,10 @@ figcaption h4 {
   color: #555; }
 #single .post-footer {
   color: gray; }
+#single .post-next {
+  float: right; }
+#single .post-previous {
+  float: left; }
 
 #list .post-symbol {
   line-height: 200px; }
