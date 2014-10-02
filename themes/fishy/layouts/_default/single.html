@@ -8,7 +8,15 @@
       <span class="post-date"><p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p></span>
       <span class="post-content">
         {{ .Content }}
+        {{with .Prev}}
+        <a class="post-previous" href="{{.Permalink}}">&laquo; Previous</a>
+        {{end}}
+        {{with .Next}}
+        <a class="post-next" href="{{.Permalink}}">Next &raquo;</a>
+        {{end}}
+        <br>
       </span>
+
     </div>
     <hr>
 	{{ template "theme/partials/post-footer.html" . }}
