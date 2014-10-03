@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Recent Content on Gamedev tipfish </title>
+      <title>Posts on Gamedev tipfish </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://gamedev.tip.fish/index.xml/</link>
+    <link>http://gamedev.tip.fish/post/index.xml/</link>
     <language>en-us</language>
     
     
-    <updated>Tue, 23 Sep 2014 02:48:24 &#43;0200</updated>
-    
-    <item>
-      <title>about</title>
-      <link>http://gamedev.tip.fish/about/</link>
-      <pubDate>Tue, 23 Sep 2014 02:48:24 &#43;0200</pubDate>
-      
-      <guid>http://gamedev.tip.fish/about/</guid>
-      <description>&lt;p&gt;gamedev.tip.fish is a site where game developer tips are posted on a daily basis. At least, I hope it will soon do that :).&lt;/p&gt;
-</description>
-    </item>
+    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
     
     <item>
       <title>Get it done by any means</title>
