@@ -8,10 +8,10 @@
       <span class="post-date"><p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p></span>
       <span class="post-content">
         {{ .Content }}
-        {{with .Prev}}
+        {{with .Next}}
         <a class="post-previous" href="{{.Permalink}}">&laquo; Previous</a>
         {{end}}
-        {{with .Next}}
+        {{with .Prev}}
         <a class="post-next" href="{{.Permalink}}">Next &raquo;</a>
         {{end}}
         <br>
