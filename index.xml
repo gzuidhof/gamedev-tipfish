@@ -7,7 +7,19 @@
     <language>en-us</language>
     
     
-    <updated>Tue, 07 Oct 2014 16:50:32 UTC</updated>
+    <updated>Wed, 08 Oct 2014 10:21:38 UTC</updated>
+    
+    <item>
+      <title>Give back</title>
+      <link>http://gamedev.tip.fish/post/5/</link>
+      <pubDate>Wed, 08 Oct 2014 10:21:38 UTC</pubDate>
+      
+      <guid>http://gamedev.tip.fish/post/5/</guid>
+      <description>&lt;p&gt;When you got started with a particular game engine, language or tool you probably learned it by using content such as video tutorials, books, questions on stackoverflow or IRC.&lt;/p&gt;
+
+&lt;p&gt;Now that you do know a thing or two, consider giving back to the community by creating your own tutorial, helping rookies on the forum or open sourcing projects that others can learn from.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Do not introduce multiple mechanics in one level</title>
