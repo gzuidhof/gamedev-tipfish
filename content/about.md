@@ -5,4 +5,9 @@ title = "about"
 
 +++
 
-gamedev.tip.fish is a site where game developer tips are posted on a daily basis. At least, I hope it will soon do that :).
+gamedev.tip.fish is a site where game developer tips are posted daily.
+
+
+It's not done yet, but it's getting there.
+
+\- [@protoduction](https://www.twitter.com/protoduction)
