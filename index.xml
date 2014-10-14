@@ -7,7 +7,17 @@
     <language>en-us</language>
     
     
-    <updated>Mon, 13 Oct 2014 16:00:09 UTC</updated>
+    <updated>Tue, 14 Oct 2014 16:00:07 UTC</updated>
+    
+    <item>
+      <title>Make the goal of your game clear</title>
+      <link>http://gamedev.tip.fish/post/11/</link>
+      <pubDate>Tue, 14 Oct 2014 16:00:07 UTC</pubDate>
+      
+      <guid>http://gamedev.tip.fish/post/11/</guid>
+      <description>&lt;p&gt;Make it extra clear for the player what they are supposed to do. What may seem obvious to you, probably isn&amp;rsquo;t for new players.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Do not forget sound</title>
@@ -27,7 +37,7 @@
       <pubDate>Sun, 12 Oct 2014 16:00:07 UTC</pubDate>
       
       <guid>http://gamedev.tip.fish/post/9/</guid>
-      <description>&lt;p&gt;It can be tempting to keep adding features and mechanics, but in the end you want to ship a working game. But in the end, you want to finish a game.&lt;/p&gt;
+      <description>&lt;p&gt;It can be tempting to keep adding features and mechanics, but in the end you want to ship a working, finished game.&lt;/p&gt;
 </description>
     </item>
     
